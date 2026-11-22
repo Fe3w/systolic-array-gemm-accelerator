@@ -125,7 +125,7 @@ make test-repro
 | --- | --- | --- |
 | `make demo` | one BERT-head GEMM on the RTL: NumPy check, measured vs predicted cycles | ~10 s after the first build |
 | `make demo-waves` | VCD of one S = 4 tile, opened in GTKWave with `docs/demo/tile_s4.gtkw` | ~10 s |
-| `make animate` | the same tile as an animated GIF, `docs/img/tile_s4.gif` (how to read it and view any test's waves: README "See it run") | seconds |
+| `make animate` | the same tile as an animated GIF, `docs/img/tile_s4.gif` (how to read it and view any test's waves: `docs/waveforms/README.md`) | seconds |
 | `make waves-png` | GTKWave screenshot of that tile, `docs/img/waves_tile_s4.png` (needs `sudo apt install xvfb imagemagick`) | ~10 s |
 | `make compile M=128 N=768 K=768` | a command file in `build/` + predicted cycles | seconds |
 | `python3 scripts/measure/perf.py --quick` | 3 small benchmark shapes | seconds |

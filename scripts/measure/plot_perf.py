@@ -12,6 +12,7 @@ Usage: python3 scripts/measure/plot_perf.py results/perf/<run_id>.csv
 from __future__ import annotations
 
 import csv
+import math
 import sys
 from pathlib import Path
 
@@ -91,6 +92,7 @@ def main(path: str) -> int:
     xi = [i / 4 for i in range(1, 4 * 64)]
     ax.plot(xi, [min(peak, i * bw) for i in xi], color=INK2, linewidth=2,
             label=f"roof: min({peak}, {bw} B/cycle × intensity)")  # fmt: skip
+    placed: list[tuple[float, float, list[str]]] = []  # log10 position, shape names
     for idx, r in enumerate(
         sorted(base, key=lambda r: int(r["useful_macs"]) / int(r["cycles_total"]))
     ):
@@ -99,9 +101,17 @@ def main(path: str) -> int:
         perf = int(r["useful_macs"]) / int(r["cycles_total"])
         ax.scatter([inten], [perf], s=40, color=SERIES[0], edgecolors=SURFACE, linewidths=2,
                    zorder=3)  # fmt: skip
-        dy = -11 if idx % 2 == 0 else 6  # alternate below/above to avoid collisions
-        ax.annotate(r["shape_id"], (inten, perf), textcoords="offset points", xytext=(5, dy),
-                    fontsize=7, color=INK2)  # fmt: skip
+        lx, ly = math.log10(inten), math.log10(perf)
+        near = [i for i, (px, py, _) in enumerate(placed) if abs(lx - px) < 0.03 and abs(ly - py) < 0.03]
+        if near:  # points on top of each other share one label, written below them
+            px, py, names = placed[near[0]]
+            placed[near[0]] = (px, py, names + [r["shape_id"]])
+            continue
+        placed.append((lx, ly, [r["shape_id"]]))
+    for idx, (lx, ly, names) in enumerate(placed):
+        dy = (-11 if idx % 2 == 0 else 6) if len(names) == 1 else -12 - 9 * (len(names) - 1)
+        ax.annotate("\n".join(names), (10 ** lx, 10 ** ly), textcoords="offset points",
+                    xytext=(6, dy), fontsize=7, color=INK2)  # fmt: skip
     ax.set_xscale("log")
     ax.set_yscale("log")
     plain = FuncFormatter(lambda v, _: f"{v:g}")
@@ -111,7 +121,7 @@ def main(path: str) -> int:
     ax.set_yticks([2, 4, 8, 16, 32, peak])
     ax.set_xlabel("arithmetic intensity (useful MACs per DMA byte)", color=INK2, fontsize=9)
     ax.set_ylabel("useful MACs per cycle (measured)", color=INK2, fontsize=9)
-    ax.set_title(f"SysArray S = {s}: roofline (no DMA/compute overlap in the MVP)", color=INK,
+    ax.set_title(f"SysArray S = {s}: roofline ({csv_path.name})", color=INK,
                  fontsize=11, loc="left")  # fmt: skip
     ax.legend(frameon=False, fontsize=8, labelcolor=INK2, loc="lower right")
     fig.tight_layout()
