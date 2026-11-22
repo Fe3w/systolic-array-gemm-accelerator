@@ -202,22 +202,25 @@ def before_after(out: Path, mvp_csv: Path, final_csv: Path) -> Path:
     fig, ax = plt.subplots(figsize=(10.5, 4.2))
     x = range(len(shapes))
     bw = 0.38
-    b0 = ax.bar([i - bw / 2 for i in x], u0, bw, color=MVP_C, label="MVP (no overlap)")
-    b1 = ax.bar([i + bw / 2 for i in x], u1, bw, color=FINAL_C, label="double buffering")
+    b0 = ax.bar([i - bw / 2 for i in x], u0, bw, color=MVP_C, label="first version (measured)")
+    b1 = ax.bar([i + bw / 2 for i in x], u1, bw, color=FINAL_C, label="double buffering (measured)")
+    pred = [float(final[s]["predicted_utilization"]) for s in shapes]
+    ax.scatter([i + bw / 2 for i in x], pred, marker="_", s=900, color=INK, linewidths=2.2,
+               zorder=3, label="predicted by the performance model")  # fmt: skip
     for bars, vals in ((b0, u0), (b1, u1)):
         for b, v in zip(bars, vals):
             ax.text(b.get_x() + b.get_width() / 2, v + 0.015, f"{v:.2f}", ha="center",
                     va="bottom", fontsize=8.5, color=INK)  # fmt: skip
     labels = [f"{s}\n{final[s]['M']}×{final[s]['N']}×{final[s]['K']}" for s in shapes]
-    ax.set_xticks(list(x), labels, fontsize=8.5, color=INK)
-    ax.set_ylim(0, 1.0)
+    ax.set_xticks(list(x), labels, fontsize=9.5, color=INK)
+    ax.set_ylim(0, 0.95)
     ax.set_ylabel("PE utilization (measured)", color=MUTED)
-    ax.set_title(f"SysArray S = {final[shapes[0]]['S']}: PE utilization, MVP vs double buffering"
-                 f" ({mvp_csv.name} → {final_csv.name})", color=INK, fontsize=11, loc="left")  # fmt: skip
+    ax.set_title(f"PE utilization per layer, {final[shapes[0]]['S']} × {final[shapes[0]]['S']} array",
+                 color=INK, fontsize=12, loc="left", pad=30)  # fmt: skip
     ax.spines[["top", "right"]].set_visible(False)
     ax.grid(axis="y", color="#e4e7eb")
     ax.set_axisbelow(True)
-    ax.legend(frameon=False, loc="upper right", fontsize=9)
+    ax.legend(frameon=False, loc="lower left", bbox_to_anchor=(0, 1.0), fontsize=9.5, ncol=3)
     path = out / "utilization_before_after.png"
     fig.savefig(path, dpi=160, bbox_inches="tight", facecolor="white")
     plt.close(fig)

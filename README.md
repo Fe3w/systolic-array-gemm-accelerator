@@ -24,18 +24,34 @@ results leave at the bottom.</sub></p>
 
 ## Highlights
 
-| | |
+| Result | What it means |
 | --- | --- |
-| ⚡ **0.78 – 0.82 utilization** | of the 64 multiply-add units on real BERT and ResNet-50 3×3 layers, up from 0.43–0.45 in the first version |
-| 🚀 **up to 1.8× faster** | than the first version on the same layers, by overlapping data movement with compute |
-| 🎯 **16 / 16 exact predictions** | a performance model predicts the cycle count before the hardware runs, and matched every measurement |
-| 🧠 **Own compiler** | tiles any matrix size into hardware commands; picks the loop order with 4× less weight traffic |
-| ✅ **1,000 / 1,000 tests pass** | random matrix multiplies, bit-exact against NumPy |
-| 🔧 **92.89 MHz on FPGA** | full accelerator on a Lattice ECP5, one DSP block per multiply-add unit |
-| 🏭 **1.053 mm² on silicon** | placed and routed on the open SkyWater SKY130 process |
+| **0.78 – 0.82 utilization** | of the 64 multiply-add units on BERT and ResNet-50 3×3 layers, up from 0.43–0.45 in the first version |
+| **Up to 1.8× faster** | than the first version on the same layers, by overlapping data movement with compute |
+| **16 / 16 exact predictions** | the performance model predicts the cycle count before the hardware runs, and matched every measurement |
+| **Own compiler** | tiles any matrix size into hardware commands; its loop order moves up to 4× less weight data |
+| **1,000 / 1,000 tests pass** | random matrix multiplies, bit-exact against NumPy |
+| **92.89 MHz on FPGA** | full accelerator on a Lattice ECP5, one DSP block per multiply-add unit |
+| **1.053 mm² on silicon** | placed and routed on the open SkyWater SKY130 process |
 
 **Built with:** SystemVerilog · cocotb · Verilator · Python · NumPy ·
 Yosys · nextpnr · LibreLane / OpenROAD · GitHub Actions
+
+## What this project covers
+
+The problem SysArray solves is the one at the heart of TPU matrix units and
+GPU Tensor Cores: keep a large grid of multiply-add units fed with data so
+none of them sits idle. The project goes through the full path an
+accelerator team works on, end to end:
+
+| Area | In this project |
+| --- | --- |
+| **Accelerator architecture** | weight-stationary systolic array, on-chip buffers, DMA, double buffering, roofline analysis |
+| **Performance engineering** | found the bottleneck from measurements, removed it (0.44 → 0.78 utilization), and predicted every cycle count with an analytical model |
+| **Compiler and hardware–software co-design** | a tiling compiler that targets this hardware: tile sizes, loop order, scheduling commands so loads overlap compute |
+| **RTL design** | synthesizable SystemVerilog, pipelined processing elements, a controller that runs two units in parallel, lint clean |
+| **Design verification** | cocotb testbenches against a NumPy golden model, constrained-random campaigns, corner cases, replayable seeds, CI |
+| **Implementation (PPA)** | FPGA synthesis and timing on Lattice ECP5; ASIC place-and-route on SkyWater SKY130 |
 
 ---
 
@@ -52,6 +68,35 @@ Yosys · nextpnr · LibreLane / OpenROAD · GitHub Actions
   **accumulator**.
 - The **input buffer has two halves** (ping-pong): the next block of data
   loads while the current one is being computed.
+
+## Performance
+
+![Utilization, first version vs double buffering](docs/img/utilization_before_after.png)
+
+The first version did one thing at a time: load, compute, store. Overlapping
+the next load with the current compute (double buffering) almost doubled the
+useful work per cycle. The black marks are the performance model's
+predictions, made before each run.
+
+| Layer | Size (M × N × K) | Cycles | Utilization |
+| --- | --- | --- | --- |
+| 256³ square | 256 × 256 × 256 | 335,463 | 0.781 |
+| BERT projection | 128 × 768 × 768 | 1,516,071 | 0.778 |
+| BERT FFN down | 128 × 768 × 3072 | 5,912,103 | 0.798 |
+| BERT FFN up | 128 × 3072 × 768 | 6,063,879 | 0.778 |
+| ResNet-50 3×3 | 3136 × 64 × 576 | 2,195,807 | 0.823 |
+| ResNet-50 1×1 | 3136 × 256 × 64 | 1,338,343 | 0.600 |
+
+Measured on the RTL; the performance model predicted every one of these cycle
+counts exactly.
+
+<p align="center">
+  <img src="results/perf/be6f466_roofline.png" width="78%" alt="Roofline">
+</p>
+<p align="center"><sub>Roofline: the array peaks at 64 multiply-adds per cycle and the DMA moves 8 bytes per cycle.
+The BERT layers sit close to the corner, where compute and memory bandwidth are both near their limit.</sub></p>
+
+More detail: [Performance deep dive](docs/PERFORMANCE.md)
 
 ## How data moves through the array
 
@@ -81,35 +126,6 @@ every block of inputs (order B):
 | 256 × 256 × 256 | **0.745** | 0.618 | 4.0× of A |
 | BERT projection | **0.742** | 0.654 | 2.0× of A |
 | ResNet-50 1×1 | **0.579** | 0.497 | 3.8× of A |
-
-## Performance
-
-![Utilization, first version vs double buffering](docs/img/utilization_before_after.png)
-
-The first version did one thing at a time: load, compute, store. Overlapping
-the next load with the current compute (double buffering) almost doubled the
-useful work per cycle.
-
-| Layer | Size (M × N × K) | Cycles | Utilization |
-| --- | --- | --- | --- |
-| 256³ square | 256 × 256 × 256 | 335,463 | 0.781 |
-| BERT projection | 128 × 768 × 768 | 1,516,071 | 0.778 |
-| BERT FFN down | 128 × 768 × 3072 | 5,912,103 | 0.798 |
-| BERT FFN up | 128 × 3072 × 768 | 6,063,879 | 0.778 |
-| ResNet-50 3×3 | 3136 × 64 × 576 | 2,195,807 | 0.823 |
-| ResNet-50 1×1 | 3136 × 256 × 64 | 1,338,343 | 0.600 |
-
-Measured on the RTL; the performance model predicted every one of these cycle
-counts exactly.
-
-<p align="center">
-  <img src="results/perf/be6f466_utilization.png" width="49%" alt="Utilization per shape, measured vs predicted">
-  <img src="results/perf/be6f466_roofline.png" width="49%" alt="Roofline">
-</p>
-<p align="center"><sub>Left: measured utilization per shape (bars) vs prediction (black lines), and the two
-loop orders. Right: roofline, peak 64 multiply-adds per cycle against 8 bytes per cycle of memory bandwidth.</sub></p>
-
-More detail: [Performance deep dive](docs/PERFORMANCE.md)
 
 ## Verification
 
