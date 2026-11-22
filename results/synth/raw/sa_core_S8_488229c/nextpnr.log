@@ -1,0 +1,379 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      4028/83640     4%
+Info:         logic LUTs:   1880/83640     2%
+Info:         carry LUTs:   2052/83640     2%
+Info:           RAM LUTs:     64/10455     0%
+Info:          RAMW LUTs:     32/20910     0%
+
+Info:      Total DFFs:      5561/83640     6%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     2299 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xd7f4475b
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:       4/    365     1%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:      10/    208     4%
+Info: 	          MULT18X18D:      64/    156    41%
+Info: 	              ALU54B:       0/     78     0%
+Info: 	             EHXPLLL:       0/      4     0%
+Info: 	             EXTREFB:       0/      2     0%
+Info: 	                DCUA:       0/      2     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    224     0%
+Info: 	            SIOLOGIC:       0/    141     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/     14     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    5561/  83640     6%
+Info: 	        TRELLIS_COMB:    4318/  83640     5%
+Info: 	        TRELLIS_RAMW:      16/  10455     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 5238 cells, random placement wirelen = 706574.
+Info:     at initial placer iter 0, wirelen = 1585
+Info:     at initial placer iter 1, wirelen = 1401
+Info:     at initial placer iter 2, wirelen = 1359
+Info:     at initial placer iter 3, wirelen = 1356
+Info: Running main analytical placer, max placement attempts per cell = 12435084.
+Info:     at iteration #1, type ALL: wirelen solved = 1354, spread = 158184, legal = 165870; time = 0.46s
+Info:     at iteration #2, type ALL: wirelen solved = 6151, spread = 147186, legal = 156948; time = 0.46s
+Info:     at iteration #3, type ALL: wirelen solved = 9329, spread = 143236, legal = 149295; time = 0.42s
+Info:     at iteration #4, type ALL: wirelen solved = 12565, spread = 123242, legal = 135601; time = 0.41s
+Info:     at iteration #5, type ALL: wirelen solved = 14765, spread = 111872, legal = 121606; time = 0.41s
+Info:     at iteration #6, type ALL: wirelen solved = 16724, spread = 105916, legal = 115811; time = 0.38s
+Info:     at iteration #7, type ALL: wirelen solved = 18730, spread = 100664, legal = 110074; time = 0.37s
+Info:     at iteration #8, type ALL: wirelen solved = 20230, spread = 99336, legal = 108426; time = 0.41s
+Info:     at iteration #9, type ALL: wirelen solved = 19902, spread = 98744, legal = 107216; time = 0.41s
+Info:     at iteration #10, type ALL: wirelen solved = 20862, spread = 98205, legal = 107412; time = 0.41s
+Info:     at iteration #11, type ALL: wirelen solved = 21233, spread = 98202, legal = 108707; time = 0.39s
+Info:     at iteration #12, type ALL: wirelen solved = 21893, spread = 98136, legal = 107986; time = 0.35s
+Info:     at iteration #13, type ALL: wirelen solved = 22043, spread = 95607, legal = 106261; time = 0.54s
+Info:     at iteration #14, type ALL: wirelen solved = 22269, spread = 96984, legal = 106922; time = 0.43s
+Info:     at iteration #15, type ALL: wirelen solved = 22717, spread = 101307, legal = 108803; time = 0.37s
+Info:     at iteration #16, type ALL: wirelen solved = 23331, spread = 101277, legal = 107784; time = 0.40s
+Info:     at iteration #17, type ALL: wirelen solved = 24223, spread = 96790, legal = 108717; time = 0.40s
+Info:     at iteration #18, type ALL: wirelen solved = 24682, spread = 95165, legal = 106524; time = 0.37s
+Info: HeAP Placer Time: 10.07s
+Info:   of which solving equations: 5.56s
+Info:   of which spreading cells: 0.55s
+Info:   of which strict legalisation: 2.23s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 2776, wirelen = 106261
+Info:   at iteration #5: temp = 0.000000, timing cost = 1325, wirelen = 83379
+Info:   at iteration #10: temp = 0.000000, timing cost = 1086, wirelen = 79895
+Info:   at iteration #15: temp = 0.000000, timing cost = 1247, wirelen = 79420
+Info:   at iteration #19: temp = 0.000000, timing cost = 1177, wirelen = 79303 
+Info: SA placement time 14.79s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 60.00 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 4.82 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 1.49 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 27 endpoint(s)
+Info:          + represents [1,27) endpoint(s)
+Info: [ -6666,  -5870) |+
+Info: [ -5870,  -5074) |**+
+Info: [ -5074,  -4278) |*****+
+Info: [ -4278,  -3482) |*****+
+Info: [ -3482,  -2686) |***********+
+Info: [ -2686,  -1890) |**************+
+Info: [ -1890,  -1094) |*************+
+Info: [ -1094,   -298) |*************+
+Info: [  -298,    498) |************+
+Info: [   498,   1294) |*************+
+Info: [  1294,   2090) |*************+
+Info: [  2090,   2886) |**********+
+Info: [  2886,   3682) |****+
+Info: [  3682,   4478) |********+
+Info: [  4478,   5274) |******+
+Info: [  5274,   6070) |*******************+
+Info: [  6070,   6866) |*****************+
+Info: [  6866,   7662) |************************+
+Info: [  7662,   8458) |*******************************+
+Info: [  8458,   9254) |************************************************************ 
+Info: Checksum: 0x5d3ce72e
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 21648 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      702        297 |  702   297 |     21535|       0.94       0.94|
+Info:       2000 |     1424        575 |  722   278 |     21453|       0.65       1.60|
+Info:       3000 |     2201        798 |  777   223 |     21420|       0.74       2.34|
+Info:       4000 |     2860       1139 |  659   341 |     21269|       0.72       3.06|
+Info:       5000 |     3461       1538 |  601   399 |     21031|       1.48       4.54|
+Info:       6000 |     4013       1986 |  552   448 |     20721|       1.76       6.30|
+Info:       7000 |     4420       2579 |  407   593 |     20202|       1.47       7.77|
+Info:       8000 |     4818       3181 |  398   602 |     19683|       1.62       9.39|
+Info:       9000 |     4983       4016 |  165   835 |     18895|       1.42      10.82|
+Info:      10000 |     5120       4879 |  137   863 |     18053|       0.63      11.44|
+Info:      11000 |     5287       5712 |  167   833 |     17271|       0.70      12.14|
+Info:      12000 |     5429       6570 |  142   858 |     16484|       0.67      12.81|
+Info:      13000 |     5671       7328 |  242   758 |     15828|       0.78      13.59|
+Info:      14000 |     5846       8153 |  175   825 |     15092|       1.05      14.64|
+Info:      15000 |     6051       8948 |  205   795 |     14412|       1.08      15.72|
+Info:      16000 |     6290       9693 |  239   745 |     13811|       0.92      16.64|
+Info:      17000 |     6434      10501 |  144   808 |     12987|       1.04      17.68|
+Info:      18000 |     6539      11292 |  105   791 |     12157|       1.09      18.77|
+Info:      19000 |     6636      12059 |   97   767 |     11317|       0.93      19.70|
+Info:      20000 |     6715      12823 |   79   764 |     10427|       0.59      20.30|
+Info:      21000 |     6765      13527 |   50   704 |      9497|       0.48      20.78|
+Info:      22000 |     6801      14318 |   36   791 |      8539|       0.39      21.16|
+Info:      23000 |     6877      15113 |   76   795 |      7753|       0.49      21.66|
+Info:      24000 |     6971      16003 |   94   890 |      6867|       0.73      22.38|
+Info:      25000 |     7088      16872 |  117   869 |      6045|       1.00      23.39|
+Info:      26000 |     7259      17698 |  171   826 |      5297|       0.93      24.32|
+Info:      27000 |     7468      18473 |  209   775 |      4539|       0.97      25.29|
+Info:      28000 |     7652      19270 |  184   797 |      3784|       0.94      26.23|
+Info:      29000 |     7834      20083 |  182   813 |      3077|       0.98      27.21|
+Info:      30000 |     8081      20836 |  247   753 |      2414|       0.89      28.10|
+Info:      31000 |     8415      21502 |  334   666 |      1933|       0.94      29.05|
+Info:      32000 |     8550      22329 |  135   827 |      1101|       0.71      29.76|
+Info:      33000 |     8611      23166 |   61   837 |       176|       0.35      30.11|
+Info:      33182 |     8617      23327 |    6   161 |         0|       0.11      30.23|
+Info: Routing complete.
+Info: Router1 time 30.23s
+Info: Checksum: 0x9a583187
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.w_q_TRELLIS_FF_Q_2.Q
+Info:    routing  2.84  3.36 Net u_dut.u_array.u_grid.w_q[39][1] (103,35) -> (63,34)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.product_MULT18X18D_P9.B1
+Info:                          Defined in:
+Info:                               rtl/array/sa_grid.sv:31.29-31.32
+Info:      logic  3.93  7.29 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.product_MULT18X18D_P9.P3
+Info:    routing  3.75  11.04 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.product[3] (63,34) -> (109,37)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_3_A1_LUT4_Z.D
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:44.29-44.40
+Info:      logic  0.24  11.27 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_3_A1_LUT4_Z.F
+Info:    routing  0.89  12.16 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_3_A1 (109,37) -> (109,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_3$CCU2_COMB1.A
+Info:      logic  0.45  12.61 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_3$CCU2_COMB1.FCO
+Info:    routing  0.00  12.61 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_3_COUT (109,38) -> (109,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_4$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.68 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_4$CCU2_COMB0.FCO
+Info:    routing  0.00  12.68 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_4$CCU2_FCI_INT (109,38) -> (109,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_4$CCU2_COMB1.FCI
+Info:      logic  0.00  12.68 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_4$CCU2_COMB1.FCO
+Info:    routing  0.00  12.68 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_4_COUT (109,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_5$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.75 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_5$CCU2_COMB0.FCO
+Info:    routing  0.00  12.75 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_5$CCU2_FCI_INT (110,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_5$CCU2_COMB1.FCI
+Info:      logic  0.00  12.75 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_5$CCU2_COMB1.FCO
+Info:    routing  0.00  12.75 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_5_COUT (110,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_6$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.82 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_6$CCU2_COMB0.FCO
+Info:    routing  0.00  12.82 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_6$CCU2_FCI_INT (110,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_6$CCU2_COMB1.FCI
+Info:      logic  0.00  12.82 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_6$CCU2_COMB1.FCO
+Info:    routing  0.00  12.82 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_6_COUT (110,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.89 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  12.89 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1$CCU2_FCI_INT (110,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  12.89 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  12.89 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_COUT (110,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_7$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.96 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_7$CCU2_COMB0.FCO
+Info:    routing  0.00  12.96 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_7$CCU2_FCI_INT (110,38) -> (110,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_7$CCU2_COMB1.FCI
+Info:      logic  0.00  12.96 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_7$CCU2_COMB1.FCO
+Info:    routing  0.00  12.96 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_7_COUT (110,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_8$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.03 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_8$CCU2_COMB0.FCO
+Info:    routing  0.00  13.03 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_8$CCU2_FCI_INT (111,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_8$CCU2_COMB1.FCI
+Info:      logic  0.00  13.03 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_8$CCU2_COMB1.FCO
+Info:    routing  0.00  13.03 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_8_COUT (111,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_9$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.11 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_9$CCU2_COMB0.FCO
+Info:    routing  0.00  13.11 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_9$CCU2_FCI_INT (111,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_9$CCU2_COMB1.FCI
+Info:      logic  0.00  13.11 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_9$CCU2_COMB1.FCO
+Info:    routing  0.00  13.11 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_9_COUT (111,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_10$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.18 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_10$CCU2_COMB0.FCO
+Info:    routing  0.00  13.18 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_10$CCU2_FCI_INT (111,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_10$CCU2_COMB1.FCI
+Info:      logic  0.00  13.18 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_10$CCU2_COMB1.FCO
+Info:    routing  0.00  13.18 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_10_COUT (111,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_11$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.25 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_11$CCU2_COMB0.FCO
+Info:    routing  0.00  13.25 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_11$CCU2_FCI_INT (111,38) -> (111,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_11$CCU2_COMB1.FCI
+Info:      logic  0.00  13.25 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_11$CCU2_COMB1.FCO
+Info:    routing  0.00  13.25 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_11_COUT (111,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_15$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.32 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_15$CCU2_COMB0.FCO
+Info:    routing  0.00  13.32 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_15$CCU2_FCI_INT (112,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_15$CCU2_COMB1.FCI
+Info:      logic  0.00  13.32 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_15$CCU2_COMB1.FCO
+Info:    routing  0.00  13.32 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_15_COUT (112,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_12$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.39 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_12$CCU2_COMB0.FCO
+Info:    routing  0.00  13.39 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_12$CCU2_FCI_INT (112,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_12$CCU2_COMB1.FCI
+Info:      logic  0.00  13.39 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_12$CCU2_COMB1.FCO
+Info:    routing  0.00  13.39 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_12_COUT (112,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_13$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.46 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_13$CCU2_COMB0.FCO
+Info:    routing  0.00  13.46 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_13$CCU2_FCI_INT (112,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_13$CCU2_COMB1.FCI
+Info:      logic  0.00  13.46 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_13$CCU2_COMB1.FCO
+Info:    routing  0.00  13.46 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_13_COUT (112,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_14$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.53 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_14$CCU2_COMB0.FCO
+Info:    routing  0.00  13.53 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_14$CCU2_FCI_INT (112,38) -> (112,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_14$CCU2_COMB1.FCI
+Info:      logic  0.00  13.53 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_14$CCU2_COMB1.FCO
+Info:    routing  0.00  13.53 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_14_COUT (112,38) -> (113,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:56.19-56.37
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.60 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  13.60 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_1$CCU2_FCI_INT (113,38) -> (113,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.40  14.01 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d_CCU2C_S1_1$CCU2_COMB1.F
+Info:    routing  0.13  14.14 Net u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_d[31] (113,38) -> (113,38)
+Info:                          Sink u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_q_TRELLIS_FF_Q_20.DI
+Info:                          Defined in:
+Info:                               rtl/pe/sa_pe.sv:46.29-46.35
+Info:      setup  0.00  14.14 Source u_dut.u_array.u_grid.g_row[4].g_col[7].u_pe.psum_q_TRELLIS_FF_Q_20.DI
+Info: 6.53 ns logic, 7.60 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source rst$tr_io.O
+Info:    routing  2.78  2.78 Net rst$TRELLIS_IO_IN (126,38) -> (95,30)
+Info:                          Sink u_dut.u_array.u_grid.g_row[1].g_col[6].u_pe.a_valid_q_TRELLIS_FF_Q.LSR
+Info:                          Defined in:
+Info:                               rtl/array/sa_feeder.sv:27.43-27.46
+Info:      setup  0.42  3.21 Source u_dut.u_array.u_grid.g_row[1].g_col[6].u_pe.a_valid_q_TRELLIS_FF_Q.LSR
+Info: 0.42 ns logic, 2.78 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source x3_TRELLIS_FF_Q.Q
+Info:    routing  1.21  1.73 Net dout$TRELLIS_IO_OUT (123,11) -> (126,11)
+Info:                          Sink dout$tr_io.I
+Info:                          Defined in:
+Info:                               /home/user/sysarray/build/synth/sa_core_S8_488229c/synth_wrap.v:65.13-65.15
+Info: 0.52 ns logic, 1.21 ns routing
+
+Warning: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 70.74 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 3.21 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 1.73 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 29 endpoint(s)
+Info:          + represents [1,29) endpoint(s)
+Info: [ -4136,  -3476) |*+
+Info: [ -3476,  -2816) |*****+
+Info: [ -2816,  -2156) |***********+
+Info: [ -2156,  -1496) |*****************+
+Info: [ -1496,   -836) |***************+
+Info: [  -836,   -176) |*************+
+Info: [  -176,    484) |*****+
+Info: [   484,   1144) |*+
+Info: [  1144,   1804) |*+
+Info: [  1804,   2464) |***+
+Info: [  2464,   3124) |*************+
+Info: [  3124,   3784) |******+
+Info: [  3784,   4444) |*********+
+Info: [  4444,   5104) |******+
+Info: [  5104,   5764) |******+
+Info: [  5764,   6424) |*******+
+Info: [  6424,   7084) |***************+
+Info: [  7084,   7744) |************************+
+Info: [  7744,   8404) |***********************************+
+Info: [  8404,   9064) |************************************************************ 
+1 warning, 0 errors
+
+Info: Program finished normally.

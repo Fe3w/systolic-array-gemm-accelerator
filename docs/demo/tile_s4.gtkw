@@ -1,0 +1,66 @@
+[*]
+[*] GTKWave layout for `make demo-waves` (SysArray, one S = 4 tile).
+[*] Opened as: gtkwave build/demo/tile_s4.vcd docs/demo/tile_s4.gtkw
+[*]
+[timestart] 0
+[size] 1600 900
+[pos] -1 -1
+*-16.000000 15000 130000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] sa_array.
+[treeopen] sa_array.u_grid.
+[sst_width] 250
+[signals_width] 300
+[sst_expanded] 1
+[sst_vpaned_height] 300
+@200
+-Clock and weight load (S = 4: w_load for S cycles)
+@28
+sa_array.clk
+@28
+sa_array.w_load
+@22
+sa_array.w_row[31:0]
+@424
+sa_array.u_grid.w_q[0][0][7:0]
+@424
+sa_array.u_grid.w_q[1][0][7:0]
+@424
+sa_array.u_grid.w_q[2][0][7:0]
+@424
+sa_array.u_grid.w_q[3][0][7:0]
+@200
+-Activations: a_row in, then skewed by row (row r is r cycles late)
+@28
+sa_array.a_valid
+@22
+sa_array.a_row[31:0]
+@28
+sa_array.grid_a_valid[3:0]
+@424
+sa_array.u_grid.a_q[0][0][7:0]
+@424
+sa_array.u_grid.a_q[1][0][7:0]
+@424
+sa_array.u_grid.a_q[2][0][7:0]
+@424
+sa_array.u_grid.a_q[3][0][7:0]
+@200
+-Partial sums down column 0 (one PE per cycle)
+@424
+sa_array.u_grid.psum_q[0][0][31:0]
+@424
+sa_array.u_grid.psum_q[1][0][31:0]
+@424
+sa_array.u_grid.psum_q[2][0][31:0]
+@424
+sa_array.u_grid.psum_q[3][0][31:0]
+@200
+-Outputs: grid valids (skewed) -> de-skewed row of C
+@28
+sa_array.grid_valid[3:0]
+@28
+sa_array.c_valid
+@22
+sa_array.c_row[127:0]
+[pattern_trace] 1
+[pattern_trace] 0

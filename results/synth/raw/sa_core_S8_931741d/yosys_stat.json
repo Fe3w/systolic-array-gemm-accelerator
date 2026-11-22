@@ -1,0 +1,55 @@
+{
+   "creator": "Yosys 0.69+ (git sha1 9f09efcdb-dirty, Release, GNU /home/conda/feedstock_root/build_artifacts/bld/rattler-build_yosys_1788957668/build_env/bin/x86_64-conda-linux-gnu-c++ 15.3.0) [github.com/conda-forge/yosys-feedstock at main]",
+   "invocation": "stat -json ",
+   "modules": {
+      "\\sa_core": {
+         "num_wires":         4630,
+         "num_wire_bits":     40207,
+         "num_pub_wires":     4630,
+         "num_pub_wire_bits": 40207,
+         "num_ports":         31,
+         "num_port_bits":     318,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         8062,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$scopeinfo": 89,
+            "CCU2C": 973,
+            "DP16KD": 10,
+            "L6MUX21": 14,
+            "LUT4": 986,
+            "MULT18X18D": 64,
+            "PFUMX": 92,
+            "TRELLIS_DPR16X4": 16,
+            "TRELLIS_FF": 5818
+         }
+      }
+   },
+      "design": {
+         "num_wires":         4630,
+         "num_wire_bits":     40207,
+         "num_pub_wires":     4630,
+         "num_pub_wire_bits": 40207,
+         "num_ports":         31,
+         "num_port_bits":     318,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         8062,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$scopeinfo": 89,
+            "CCU2C": 973,
+            "DP16KD": 10,
+            "L6MUX21": 14,
+            "LUT4": 986,
+            "MULT18X18D": 64,
+            "PFUMX": 92,
+            "TRELLIS_DPR16X4": 16,
+            "TRELLIS_FF": 5818
+         }
+      }
+}
+

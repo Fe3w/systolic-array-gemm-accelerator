@@ -1,0 +1,357 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:     12457/83640    14%
+Info:         logic LUTs:   2793/83640     3%
+Info:         carry LUTs:   9568/83640    11%
+Info:           RAM LUTs:     64/10455     0%
+Info:          RAMW LUTs:     32/20910     0%
+
+Info:      Total DFFs:      7810/83640     9%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     3796 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xe8e99c07
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:       4/    365     1%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:      10/    208     4%
+Info: 	          MULT18X18D:      64/    156    41%
+Info: 	              ALU54B:       0/     78     0%
+Info: 	             EHXPLLL:       0/      4     0%
+Info: 	             EXTREFB:       0/      2     0%
+Info: 	                DCUA:       0/      2     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    224     0%
+Info: 	            SIOLOGIC:       0/    141     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/     14     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    7810/  83640     9%
+Info: 	        TRELLIS_COMB:   16427/  83640    19%
+Info: 	        TRELLIS_RAMW:      16/  10455     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 7788 cells, random placement wirelen = 945387.
+Info:     at initial placer iter 0, wirelen = 3308
+Info:     at initial placer iter 1, wirelen = 3229
+Info:     at initial placer iter 2, wirelen = 3194
+Info:     at initial placer iter 3, wirelen = 3098
+Info: Running main analytical placer, max placement attempts per cell = 74005778.
+Info:     at iteration #1, type ALL: wirelen solved = 3109, spread = 218215, legal = 230714; time = 2.13s
+Info:     at iteration #2, type ALL: wirelen solved = 13253, spread = 157618, legal = 175901; time = 1.74s
+Info:     at iteration #3, type ALL: wirelen solved = 20477, spread = 151470, legal = 170263; time = 1.56s
+Info:     at iteration #4, type ALL: wirelen solved = 29116, spread = 123471, legal = 150114; time = 1.54s
+Info:     at iteration #5, type ALL: wirelen solved = 32940, spread = 111146, legal = 135318; time = 1.39s
+Info:     at iteration #6, type ALL: wirelen solved = 35640, spread = 107109, legal = 128867; time = 1.25s
+Info:     at iteration #7, type ALL: wirelen solved = 38675, spread = 104586, legal = 128058; time = 1.46s
+Info:     at iteration #8, type ALL: wirelen solved = 40747, spread = 99842, legal = 123508; time = 1.37s
+Info:     at iteration #9, type ALL: wirelen solved = 42854, spread = 98692, legal = 121532; time = 1.51s
+Info:     at iteration #10, type ALL: wirelen solved = 44887, spread = 96465, legal = 119649; time = 1.69s
+Info:     at iteration #11, type ALL: wirelen solved = 45232, spread = 100760, legal = 122288; time = 1.36s
+Info:     at iteration #12, type ALL: wirelen solved = 47093, spread = 101425, legal = 122883; time = 1.46s
+Info:     at iteration #13, type ALL: wirelen solved = 48500, spread = 103400, legal = 121087; time = 1.31s
+Info:     at iteration #14, type ALL: wirelen solved = 48904, spread = 106006, legal = 122740; time = 1.27s
+Info:     at iteration #15, type ALL: wirelen solved = 49840, spread = 100778, legal = 117751; time = 1.14s
+Info:     at iteration #16, type ALL: wirelen solved = 50815, spread = 108917, legal = 124483; time = 0.97s
+Info:     at iteration #17, type ALL: wirelen solved = 50751, spread = 109064, legal = 122833; time = 1.00s
+Info:     at iteration #18, type ALL: wirelen solved = 52325, spread = 109994, legal = 123450; time = 1.08s
+Info:     at iteration #19, type ALL: wirelen solved = 52576, spread = 101636, legal = 116990; time = 0.94s
+Info:     at iteration #20, type ALL: wirelen solved = 52829, spread = 110287, legal = 125051; time = 0.93s
+Info:     at iteration #21, type ALL: wirelen solved = 53274, spread = 103745, legal = 117576; time = 0.86s
+Info:     at iteration #22, type ALL: wirelen solved = 54416, spread = 112012, legal = 123857; time = 0.92s
+Info:     at iteration #23, type ALL: wirelen solved = 54979, spread = 103973, legal = 116743; time = 0.87s
+Info:     at iteration #24, type ALL: wirelen solved = 55160, spread = 103703, legal = 116315; time = 0.90s
+Info:     at iteration #25, type ALL: wirelen solved = 56175, spread = 103555, legal = 115474; time = 0.84s
+Info:     at iteration #26, type ALL: wirelen solved = 56693, spread = 102308, legal = 118413; time = 0.85s
+Info:     at iteration #27, type ALL: wirelen solved = 56640, spread = 114826, legal = 125246; time = 0.92s
+Info:     at iteration #28, type ALL: wirelen solved = 56993, spread = 112295, legal = 124282; time = 0.89s
+Info:     at iteration #29, type ALL: wirelen solved = 57180, spread = 101905, legal = 119362; time = 0.88s
+Info:     at iteration #30, type ALL: wirelen solved = 57387, spread = 105173, legal = 117922; time = 0.91s
+Info: HeAP Placer Time: 47.05s
+Info:   of which solving equations: 22.82s
+Info:   of which spreading cells: 2.76s
+Info:   of which strict legalisation: 12.49s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 1980, wirelen = 115474
+Info:   at iteration #5: temp = 0.000000, timing cost = 1260, wirelen = 98492
+Info:   at iteration #10: temp = 0.000000, timing cost = 2518, wirelen = 95942
+Info:   at iteration #15: temp = 0.000000, timing cost = 1498, wirelen = 93666
+Info:   at iteration #20: temp = 0.000000, timing cost = 1510, wirelen = 93064
+Info:   at iteration #21: temp = 0.000000, timing cost = 1435, wirelen = 92945 
+Info: SA placement time 114.05s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 76.61 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 10.18 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 3.96 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 28 endpoint(s)
+Info:          + represents [1,28) endpoint(s)
+Info: [ -3053,  -2438) |+
+Info: [ -2438,  -1823) |*+
+Info: [ -1823,  -1208) |****+
+Info: [ -1208,   -593) |**+
+Info: [  -593,     22) |*****+
+Info: [    22,    637) |*********+
+Info: [   637,   1252) |*******************+
+Info: [  1252,   1867) |***********************+
+Info: [  1867,   2482) |*******************+
+Info: [  2482,   3097) |**********************+
+Info: [  3097,   3712) |*************************+
+Info: [  3712,   4327) |**************************+
+Info: [  4327,   4942) |********************************+
+Info: [  4942,   5557) |***********************************************+
+Info: [  5557,   6172) |********************+
+Info: [  6172,   6787) |****************************+
+Info: [  6787,   7402) |*****************************+
+Info: [  7402,   8017) |*********************************+
+Info: [  8017,   8632) |**********************************************************+
+Info: [  8632,   9247) |************************************************************ 
+Info: Checksum: 0x03a60dc5
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[7].g_col[6].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[3].g_col[4].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[1].g_col[1].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[0].g_col[1].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[2].g_col[5].u_pe.u_mul': Connection to RST0 remapped to RST3
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[6].g_col[5].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[5].g_col[4].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[2].g_col[4].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[1].g_col[6].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[1].g_col[7].u_pe.u_mul': Connection to RST0 remapped to RST3
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[5].g_col[1].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[2].g_col[3].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[2].g_col[0].u_pe.u_mul': Connection to RST0 remapped to RST3
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[6].g_col[6].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[3].g_col[3].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[7].g_col[7].u_pe.u_mul': Connection to RST0 remapped to RST3
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[6].g_col[2].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[2].g_col[2].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[1].g_col[2].u_pe.u_mul': Connection to RST0 remapped to RST3
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[2].g_col[1].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[3].g_col[1].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[7].g_col[5].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[6].g_col[7].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[1].g_col[5].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[0].g_col[6].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[0].g_col[0].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[1].g_col[3].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[7].g_col[3].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[4].g_col[2].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[5].g_col[0].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[6].g_col[1].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[4].g_col[3].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[0].g_col[2].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[5].g_col[7].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[4].g_col[7].u_pe.u_mul': Connection to RST0 remapped to RST2
+Info: DSP: MULT18X18D 'u_dut.u_core.u_array.u_grid.g_row[3].g_col[6].u_pe.u_mul': Connection to RST0 remapped to RST1
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 47377 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |       85        914 |   85   914 |     46480|       2.31       2.31|
+Info:       2000 |      154       1845 |   69   931 |     45700|       0.49       2.80|
+Info:       3000 |      261       2738 |  107   893 |     45037|       0.49       3.29|
+Info:       4000 |      352       3647 |   91   909 |     44292|       0.47       3.76|
+Info:       5000 |      471       4528 |  119   881 |     43520|       0.47       4.24|
+Info:       6000 |      623       5376 |  152   848 |     42791|       0.66       4.90|
+Info:       7000 |      714       6285 |   91   909 |     42129|       0.44       5.34|
+Info:       8000 |      859       7140 |  145   855 |     41453|       0.47       5.81|
+Info:       9000 |      997       8002 |  138   862 |     40758|       0.45       6.26|
+Info:      10000 |     1145       8854 |  148   852 |     40024|       0.68       6.94|
+Info:      11000 |     1272       9727 |  127   873 |     39284|       0.60       7.54|
+Info:      12000 |     1474      10525 |  202   798 |     38671|       0.65       8.19|
+Info:      13000 |     1668      11331 |  194   806 |     38012|       0.60       8.79|
+Info:      14000 |     1858      12141 |  190   810 |     37424|       0.51       9.30|
+Info:      15000 |     2084      12915 |  226   774 |     36742|       0.74      10.04|
+Info:      16000 |     2272      13727 |  188   812 |     36069|       0.65      10.69|
+Info:      17000 |     2532      14467 |  260   740 |     35458|       0.67      11.36|
+Info:      18000 |     2716      15283 |  184   816 |     34737|       0.59      11.95|
+Info:      19000 |     2915      16084 |  199   801 |     34141|       0.67      12.62|
+Info:      20000 |     3136      16863 |  221   779 |     33393|       0.90      13.52|
+Info:      21000 |     3369      17630 |  233   767 |     32645|       0.78      14.30|
+Info:      22000 |     3591      18408 |  222   778 |     32204|       0.68      14.98|
+Info:      23000 |     3820      19179 |  229   771 |     31830|       0.58      15.56|
+Info:      24000 |     4054      19945 |  234   766 |     31229|       0.49      16.05|
+Info:      25000 |     4391      20608 |  337   663 |     30651|       0.63      16.68|
+Info:      26000 |     4673      21322 |  282   714 |     29957|       0.50      17.18|
+Info:      27000 |     4893      22094 |  220   772 |     29201|       0.64      17.82|
+Info:      28000 |     5132      22796 |  239   702 |     28454|       0.35      18.16|
+Info:      29000 |     5418      23463 |  286   667 |     27766|       0.40      18.57|
+Info:      30000 |     5688      24084 |  270   621 |     27052|       0.70      19.27|
+Info:      31000 |     5916      24665 |  228   581 |     26301|       0.46      19.73|
+Info:      32000 |     6009      25246 |   93   581 |     25397|       0.33      20.06|
+Info:      33000 |     6128      25705 |  119   459 |     24612|       0.34      20.40|
+Info:      34000 |     6208      26226 |   80   521 |     23765|       0.42      20.82|
+Info:      35000 |     6261      26729 |   53   503 |     22841|       0.79      21.61|
+Info:      36000 |     6316      27210 |   55   481 |     21914|       0.33      21.94|
+Info:      37000 |     6345      27579 |   29   369 |     20946|       0.22      22.16|
+Info:      38000 |     6396      28120 |   51   541 |     20035|       0.34      22.50|
+Info:      39000 |     6448      28687 |   52   567 |     19116|       0.34      22.84|
+Info:      40000 |     6487      29339 |   39   652 |     18166|       1.10      23.95|
+Info:      41000 |     6528      30084 |   41   745 |     17212|       0.43      24.37|
+Info:      42000 |     6582      30873 |   54   789 |     16294|       0.56      24.93|
+Info:      43000 |     6652      31667 |   70   794 |     15380|       0.60      25.53|
+Info:      44000 |     6746      32523 |   94   856 |     14495|       0.80      26.33|
+Info:      45000 |     6864      33296 |  118   773 |     13625|       0.60      26.93|
+Info:      46000 |     6961      34172 |   97   876 |     12746|       0.86      27.79|
+Info:      47000 |     7030      35103 |   69   931 |     11819|       0.55      28.34|
+Info:      48000 |     7108      36025 |   78   922 |     10926|       0.58      28.91|
+Info:      49000 |     7229      36904 |  121   879 |     10061|       0.79      29.70|
+Info:      50000 |     7307      37826 |   78   922 |      9169|       0.55      30.25|
+Info:      51000 |     7361      38734 |   54   908 |      8228|       0.29      30.54|
+Info:      52000 |     7368      39476 |    7   742 |      7237|       0.41      30.96|
+Info:      53000 |     7370      40246 |    2   770 |      6240|       0.51      31.47|
+Info:      54000 |     7374      40986 |    4   740 |      5248|       0.30      31.77|
+Info:      55000 |     7383      41732 |    9   746 |      4257|       0.35      32.12|
+Info:      56000 |     7393      42499 |   10   767 |      3268|       0.32      32.43|
+Info:      57000 |     7412      43235 |   19   736 |      2292|       0.56      32.99|
+Info:      58000 |     7433      43997 |   21   762 |      1329|       0.52      33.51|
+Info:      59000 |     7480      44730 |   47   733 |       401|       1.64      35.15|
+Info:      59440 |     7511      45060 |   31   330 |         0|       2.84      37.99|
+Info: Routing complete.
+Info: Router1 time 37.99s
+Info: Checksum: 0x7be5db28
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source u_dut.u_ctrl.cmd_q_TRELLIS_FF_Q_11.Q
+Info:    routing  1.40  1.92 Net u_dut.f_rows[4] (78,45) -> (77,47)
+Info:                          Sink u_dut.u_ctrl.buf_end_CCU2C_S1_1$CCU2_COMB0.B
+Info:                          Defined in:
+Info:                               rtl/ctrl/sa_ctrl.sv:120.21-120.31
+Info:      logic  0.45  2.37 Source u_dut.u_ctrl.buf_end_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  2.37 Net u_dut.u_ctrl.buf_end_CCU2C_S1_1$CCU2_FCI_INT (77,47) -> (77,47)
+Info:                          Sink u_dut.u_ctrl.buf_end_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.00  2.37 Source u_dut.u_ctrl.buf_end_CCU2C_S1_1$CCU2_COMB1.FCO
+Info:    routing  0.00  2.37 Net u_dut.u_ctrl.buf_end_CCU2C_S1_1_COUT (77,47) -> (78,47)
+Info:                          Sink u_dut.u_ctrl.buf_end_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/ctrl/sa_ctrl.sv:136.20-136.57
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  2.44 Source u_dut.u_ctrl.buf_end_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  2.44 Net u_dut.u_ctrl.buf_end_CCU2C_S1$CCU2_FCI_INT (78,47) -> (78,47)
+Info:                          Sink u_dut.u_ctrl.buf_end_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  2.44 Source u_dut.u_ctrl.buf_end_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  2.44 Net u_dut.u_ctrl.buf_end_CCU2C_S1_COUT (78,47) -> (78,47)
+Info:                          Sink u_dut.u_ctrl.buf_end_CCU2C_S1_4$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/ctrl/sa_ctrl.sv:136.20-136.57
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.44  2.89 Source u_dut.u_ctrl.buf_end_CCU2C_S1_4$CCU2_COMB0.F
+Info:    routing  1.09  3.97 Net u_dut.u_ctrl.buf_end[8] (78,47) -> (78,48)
+Info:                          Sink u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1_D_CCU2C_COUT$CCU2_COMB0.B
+Info:                          Defined in:
+Info:                               /opt/eda/bin/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.45  4.42 Source u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1_D_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  4.42 Net u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1_D_CCU2C_COUT$CCU2_FCI_INT (78,48) -> (78,48)
+Info:                          Sink u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1_D_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  4.42 Source u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1_D_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  4.42 Net $nextpnr_CCU2C_1091$CIN (78,48) -> (78,48)
+Info:                          Sink $nextpnr_CCU2C_1091$CCU2_COMB0.FCI
+Info:      logic  0.44  4.86 Source $nextpnr_CCU2C_1091$CCU2_COMB0.F
+Info:    routing  0.42  5.28 Net u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1_D (78,48) -> (78,48)
+Info:                          Sink u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1.D
+Info:                          Defined in:
+Info:                               rtl/ctrl/sa_ctrl.sv:176.54-176.75
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.24  5.52 Source u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z_LUT4_Z_1.F
+Info:    routing  2.34  7.86 Net u_dut.u_ctrl.f_comp_q_LUT4_B_Z_PFUMX_ALUT_Z[3] (78,48) -> (79,20)
+Info:                          Sink u_dut.u_core.u_dma.accept_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /opt/eda/bin/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  8.10 Source u_dut.u_core.u_dma.accept_LUT4_Z.F
+Info:    routing  1.69  9.78 Net u_dut.dma_start (79,20) -> (79,39)
+Info:                          Sink u_dut.rd_resp_valid_LUT4_B_Z_LUT4_C.D
+Info:                          Defined in:
+Info:                               rtl/ctrl/sa_ctrl.sv:44.35-44.44
+Info:      logic  0.24  10.02 Source u_dut.rd_resp_valid_LUT4_B_Z_LUT4_C.F
+Info:    routing  0.89  10.91 Net u_dut.rd_resp_valid_LUT4_B_Z_LUT4_C_Z[1] (79,39) -> (79,41)
+Info:                          Sink u_dut.u_core.u_acc.st_re_LUT4_C.D
+Info:                          Defined in:
+Info:                               /opt/eda/bin/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  11.14 Source u_dut.u_core.u_acc.st_re_LUT4_C.F
+Info:    routing  0.76  11.90 Net u_dut.u_core.u_acc.st_re_LUT4_C_Z (79,41) -> (79,40)
+Info:                          Sink u_dut.u_core.u_dma.ptr_q_TRELLIS_FF_Q_7.CE
+Info:      setup  0.00  11.90 Source u_dut.u_core.u_dma.ptr_q_TRELLIS_FF_Q_7.CE
+Info: 3.32 ns logic, 8.58 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source rst$tr_io.O
+Info:    routing  6.80  6.80 Net rst$TRELLIS_IO_IN (126,35) -> (49,6)
+Info:                          Sink u_dut.u_core.u_array.u_grid.av_q[54]_TRELLIS_FF_Q.LSR
+Info:                          Defined in:
+Info:                               rtl/ctrl/sa_ctrl.sv:28.35-28.38
+Info:      setup  0.42  7.23 Source u_dut.u_core.u_array.u_grid.av_q[54]_TRELLIS_FF_Q.LSR
+Info: 0.42 ns logic, 6.80 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source x4_TRELLIS_FF_Q.Q
+Info:    routing  2.15  2.67 Net dout$TRELLIS_IO_OUT (94,11) -> (126,11)
+Info:                          Sink dout$tr_io.I
+Info:                          Defined in:
+Info:                               /home/user/sysarray/build/synth/sa_top_S8_dc61168/synth_wrap.v:133.13-133.15
+Info: 0.52 ns logic, 2.15 ns routing
+
+Warning: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 84.02 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 7.23 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 2.67 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 36 endpoint(s)
+Info:          + represents [1,36) endpoint(s)
+Info: [ -1902,  -1350) |+
+Info: [ -1350,   -798) |+
+Info: [  -798,   -246) |*+
+Info: [  -246,    306) |***+
+Info: [   306,    858) |*+
+Info: [   858,   1410) |*+
+Info: [  1410,   1962) |*******+
+Info: [  1962,   2514) |***************+
+Info: [  2514,   3066) |**********+
+Info: [  3066,   3618) |**********+
+Info: [  3618,   4170) |***************************+
+Info: [  4170,   4722) |*************************************************+
+Info: [  4722,   5274) |******************************************+
+Info: [  5274,   5826) |*****************+
+Info: [  5826,   6378) |************+
+Info: [  6378,   6930) |***********+
+Info: [  6930,   7482) |*********************+
+Info: [  7482,   8034) |*********************************+
+Info: [  8034,   8586) |************************************************************ 
+Info: [  8586,   9138) |**********************************************+
+1 warning, 0 errors
+
+Info: Program finished normally.

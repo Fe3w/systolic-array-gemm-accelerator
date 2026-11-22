@@ -1,0 +1,90 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      # Full history: compiler/tests/test_results_provenance.py checks that every
+      # commit named in results/ exists (milestone branches included).
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Same tool source as cloud sessions (D-013a, M11b): Verilator and Yosys from
+      # conda-forge into /opt/eda, nextpnr-ecp5 from PyPI (yowasp).
+      - name: Install EDA tools
+        run: |
+          sudo mkdir -p /opt/eda && sudo chown "$USER" /opt/eda
+          EDA_PREFIX=/opt/eda bash scripts/install_eda.sh
+          echo "/opt/eda/bin" >> "$GITHUB_PATH"
+          # The conda env also ships a python without pip; later GITHUB_PATH entries
+          # come first, so put setup-python's interpreter back in front.
+          echo "$pythonLocation/bin" >> "$GITHUB_PATH"
+
+      - name: Install Python requirements
+        run: python -m pip install -r requirements.txt
+
+      - name: Check environment
+        run: make check PYTHON=python
+
+      - name: Lint RTL
+        run: make lint
+
+      - name: Run tests
+        run: make test PYTHON=python
+
+      - name: Seed reproducibility (SYSARRAY_SEED=1 twice, fast subset)
+        run: make test-repro PYTHON=python
+
+      # Development repository only (the published copy has no .publish/): fail if the
+      # public copy would contain private paths or text, secrets or big files (D-034).
+      - name: Publish check (no private files in the public copy)
+        if: hashFiles('.publish/clean_copy.sh') != ''
+        run: .publish/clean_copy.sh --dry-run --no-test
+
+  # Synthesis + place-and-route when RTL or the flow changes (M11b, issue 11), so
+  # FPGA numbers cannot silently go stale. Reports are uploaded as artifacts; the
+  # committed results/synth/ files are still produced deliberately with `make synth`.
+  synth:
+    runs-on: ubuntu-24.04
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Did RTL or the synthesis flow change?
+        id: changed
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          if git diff --quiet "$base" HEAD -- rtl scripts/synth; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.changed.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+      - name: Install EDA tools
+        if: steps.changed.outputs.run == 'true'
+        run: |
+          sudo mkdir -p /opt/eda && sudo chown "$USER" /opt/eda
+          EDA_PREFIX=/opt/eda bash scripts/install_eda.sh
+          echo "/opt/eda/bin" >> "$GITHUB_PATH"
+          echo "$pythonLocation/bin" >> "$GITHUB_PATH"
+      - name: make synth
+        if: steps.changed.outputs.run == 'true'
+        run: make synth PYTHON=python
+      - uses: actions/upload-artifact@v4
+        if: steps.changed.outputs.run == 'true'
+        with:
+          name: synth-results
+          path: results/synth/

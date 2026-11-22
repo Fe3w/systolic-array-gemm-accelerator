@@ -1,0 +1,14 @@
+# Tool configuration only. The `sysarray` package is put on sys.path by
+# pytest.ini (`pythonpath = compiler .`), so there is nothing to install.
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["sysarray", "tb"]
