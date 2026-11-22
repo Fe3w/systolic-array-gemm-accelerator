@@ -1,0 +1,76 @@
+{
+  "top": "sa_core",
+  "S": 8,
+  "git_commit": "931741d",
+  "device": {
+    "family": "ECP5",
+    "part": "LFE5U-85F",
+    "package": "CABGA381",
+    "speed": 6
+  },
+  "target_freq_mhz": 100.0,
+  "nextpnr_seed": 1,
+  "fmax_mhz": {
+    "$glbnet$clk$TRELLIS_IO_IN": 98.93
+  },
+  "yosys_cells": {
+    "LUT4": 986,
+    "TRELLIS_FF": 5818,
+    "CCU2C": 973,
+    "MULT18X18D": 64,
+    "DP16KD": 10,
+    "PFUMX": 92,
+    "L6MUX21": 14,
+    "TRELLIS_DPR16X4": 16
+  },
+  "nextpnr_utilization": {
+    "ALU54B": {
+      "available": 78,
+      "used": 0
+    },
+    "DP16KD": {
+      "available": 208,
+      "used": 10
+    },
+    "MULT18X18D": {
+      "available": 156,
+      "used": 64
+    },
+    "TRELLIS_COMB": {
+      "available": 83640,
+      "used": 3368
+    },
+    "TRELLIS_FF": {
+      "available": 83640,
+      "used": 6114
+    },
+    "TRELLIS_IO": {
+      "available": 365,
+      "used": 4
+    },
+    "TRELLIS_RAMW": {
+      "available": 10455,
+      "used": 16
+    }
+  },
+  "harness": {
+    "input_shift_ffs": 179,
+    "output_ffs": 137,
+    "xor_tree_ffs": 48,
+    "xor_stages": 4
+  },
+  "critical_path": {
+    "from_clock": "posedge $glbnet$clk$TRELLIS_IO_IN",
+    "to_clock": "posedge $glbnet$clk$TRELLIS_IO_IN",
+    "start_cell": "u_dut.u_acc.u_mem.mem.0.0",
+    "end_cell": "o_q_TRELLIS_FF_Q_116",
+    "logic_ns": 6.558,
+    "routing_ns": 3.55,
+    "steps": 9
+  },
+  "tools": {
+    "yosys": "Yosys 0.69+ (git sha1 9f09efcdb-dirty, Release, GNU /home/conda/feedstock_root/build_artifacts/bld/rattler-build_yosys_1",
+    "nextpnr": "yowasp-nextpnr-ecp5"
+  },
+  "script": "scripts/synth/ecp5.py"
+}

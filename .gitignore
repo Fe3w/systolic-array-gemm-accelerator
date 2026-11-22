@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Simulation output
+sim_build/
+results.xml
+*.vcd
+*.fst
+*.ghw
+
+# Synthesis / ASIC scratch (committed summaries live in results/)
+build/
+runs/
+*.json.tmp
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,5 @@
+# Python dependencies. Hardware tools (Verilator >= 5.036, Yosys, nextpnr) come from OSS CAD Suite.
+cocotb>=2.0,<3
+numpy>=1.26
+pytest>=8
+matplotlib>=3.8

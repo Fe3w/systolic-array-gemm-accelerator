@@ -1,0 +1,52 @@
+{
+  "script": "scripts/verify/campaign.py",
+  "git_commit": "126930e",
+  "S": 8,
+  "seed": 1846454707,
+  "gemms": 1000,
+  "failures": 0,
+  "cocotb_tests": 2,
+  "cocotb_failures": 0,
+  "exact_timing_checks": 278,
+  "orders": {
+    "B": 479,
+    "A": 521
+  },
+  "stalls": {
+    "0.1": 255,
+    "0.0": 492,
+    "0.3": 253
+  },
+  "latency": {
+    "2": 234,
+    "4": 267,
+    "3": 249,
+    "1": 250
+  },
+  "max_outstanding": {
+    "1": 242,
+    "8": 254,
+    "3": 58,
+    "2": 297,
+    "5": 75,
+    "4": 74
+  },
+  "non_multiple_of_S_shapes": 961,
+  "dims_max": {
+    "M": 35,
+    "N": 35,
+    "K": 35
+  },
+  "corners": {
+    "all -128": true,
+    "all 127": true,
+    "mixed signs": true,
+    "M=N=K=1": true,
+    "M=1": true,
+    "N=1": true,
+    "K=1": true,
+    "int32 wrap K=131072": true
+  },
+  "total_useful_macs": 6139732,
+  "wall_clock_s": 93.5
+}

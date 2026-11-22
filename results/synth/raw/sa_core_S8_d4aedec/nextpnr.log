@@ -1,0 +1,359 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      3027/83640     3%
+Info:         logic LUTs:    991/83640     1%
+Info:         carry LUTs:   1940/83640     2%
+Info:           RAM LUTs:     64/10455     0%
+Info:          RAMW LUTs:     32/20910     0%
+
+Info:      Total DFFs:      6466/83640     7%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     2186 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xb977fe90
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:       4/    365     1%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:      10/    208     4%
+Info: 	          MULT18X18D:      64/    156    41%
+Info: 	              ALU54B:       0/     78     0%
+Info: 	             EHXPLLL:       0/      4     0%
+Info: 	             EXTREFB:       0/      2     0%
+Info: 	                DCUA:       0/      2     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    224     0%
+Info: 	            SIOLOGIC:       0/    141     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/     14     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    6466/  83640     7%
+Info: 	        TRELLIS_COMB:    3317/  83640     3%
+Info: 	        TRELLIS_RAMW:      16/  10455     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 5368 cells, random placement wirelen = 695447.
+Info:     at initial placer iter 0, wirelen = 1622
+Info:     at initial placer iter 1, wirelen = 1273
+Info:     at initial placer iter 2, wirelen = 1277
+Info:     at initial placer iter 3, wirelen = 1264
+Info: Running main analytical placer, max placement attempts per cell = 12196860.
+Info:     at iteration #1, type ALL: wirelen solved = 1259, spread = 157786, legal = 167963; time = 0.68s
+Info:     at iteration #2, type ALL: wirelen solved = 6723, spread = 138392, legal = 147434; time = 0.47s
+Info:     at iteration #3, type ALL: wirelen solved = 10831, spread = 115310, legal = 128407; time = 0.42s
+Info:     at iteration #4, type ALL: wirelen solved = 13898, spread = 107982, legal = 118081; time = 0.40s
+Info:     at iteration #5, type ALL: wirelen solved = 17410, spread = 98645, legal = 110047; time = 0.39s
+Info:     at iteration #6, type ALL: wirelen solved = 19252, spread = 86972, legal = 101972; time = 0.41s
+Info:     at iteration #7, type ALL: wirelen solved = 21093, spread = 85106, legal = 99437; time = 0.40s
+Info:     at iteration #8, type ALL: wirelen solved = 21086, spread = 81930, legal = 98466; time = 0.39s
+Info:     at iteration #9, type ALL: wirelen solved = 22429, spread = 80224, legal = 94512; time = 0.34s
+Info:     at iteration #10, type ALL: wirelen solved = 22357, spread = 81050, legal = 93604; time = 0.39s
+Info:     at iteration #11, type ALL: wirelen solved = 23011, spread = 82404, legal = 89790; time = 0.37s
+Info:     at iteration #12, type ALL: wirelen solved = 23682, spread = 82084, legal = 90646; time = 0.32s
+Info:     at iteration #13, type ALL: wirelen solved = 24595, spread = 84376, legal = 89737; time = 0.31s
+Info:     at iteration #14, type ALL: wirelen solved = 24861, spread = 88863, legal = 93129; time = 0.26s
+Info:     at iteration #15, type ALL: wirelen solved = 25990, spread = 87092, legal = 92465; time = 0.26s
+Info:     at iteration #16, type ALL: wirelen solved = 25763, spread = 86332, legal = 92582; time = 0.28s
+Info:     at iteration #17, type ALL: wirelen solved = 26178, spread = 88113, legal = 94770; time = 0.40s
+Info:     at iteration #18, type ALL: wirelen solved = 27509, spread = 95627, legal = 102611; time = 0.31s
+Info: HeAP Placer Time: 9.28s
+Info:   of which solving equations: 5.34s
+Info:   of which spreading cells: 0.57s
+Info:   of which strict legalisation: 1.78s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 1157, wirelen = 89737
+Info:   at iteration #5: temp = 0.000000, timing cost = 1429, wirelen = 73963
+Info:   at iteration #10: temp = 0.000000, timing cost = 1014, wirelen = 68389
+Info:   at iteration #15: temp = 0.000000, timing cost = 841, wirelen = 65955
+Info:   at iteration #20: temp = 0.000000, timing cost = 570, wirelen = 64579
+Info:   at iteration #25: temp = 0.000000, timing cost = 554, wirelen = 64204
+Info:   at iteration #30: temp = 0.000000, timing cost = 565, wirelen = 64054
+Info:   at iteration #35: temp = 0.000000, timing cost = 560, wirelen = 63889
+Info:   at iteration #35: temp = 0.000000, timing cost = 558, wirelen = 63914 
+Info: SA placement time 22.41s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 78.65 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 6.42 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 2.37 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 18 endpoint(s)
+Info:          + represents [1,18) endpoint(s)
+Info: [ -2715,  -2117) |+
+Info: [ -2117,  -1519) |+
+Info: [ -1519,   -921) |*+
+Info: [  -921,   -323) |*******+
+Info: [  -323,    275) |**********+
+Info: [   275,    873) |**********+
+Info: [   873,   1471) |********************+
+Info: [  1471,   2069) |**********************+
+Info: [  2069,   2667) |**********************+
+Info: [  2667,   3265) |***********************+
+Info: [  3265,   3863) |*********************+
+Info: [  3863,   4461) |*******************+
+Info: [  4461,   5059) |**************************+
+Info: [  5059,   5657) |*********************************+
+Info: [  5657,   6255) |***********************************+
+Info: [  6255,   6853) |**********************************************+
+Info: [  6853,   7451) |****************************************+
+Info: [  7451,   8049) |***************************************************+
+Info: [  8049,   8647) |***********************************************************+
+Info: [  8647,   9245) |************************************************************ 
+Info: Checksum: 0x9e4a26dd
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 20952 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      422        577 |  422   577 |     20474|       0.95       0.95|
+Info:       2000 |      724       1275 |  302   698 |     19830|       0.84       1.80|
+Info:       3000 |     1018       1981 |  294   706 |     19165|       0.72       2.52|
+Info:       4000 |     1251       2748 |  233   767 |     18421|       0.57       3.09|
+Info:       5000 |     1490       3509 |  239   761 |     17704|       0.62       3.71|
+Info:       6000 |     1690       4309 |  200   800 |     16991|       0.57       4.27|
+Info:       7000 |     1861       5138 |  171   829 |     16241|       0.46       4.73|
+Info:       8000 |     2074       5925 |  213   787 |     15481|       0.49       5.22|
+Info:       9000 |     2253       6746 |  179   821 |     14709|       0.48       5.70|
+Info:      10000 |     2497       7502 |  244   756 |     14058|       0.59       6.29|
+Info:      11000 |     2646       8337 |  149   835 |     13247|       0.96       7.25|
+Info:      12000 |     2737       9131 |   91   794 |     12362|       1.09       8.33|
+Info:      13000 |     2822       9987 |   85   856 |     11493|       1.29       9.62|
+Info:      14000 |     2962      10844 |  140   857 |     10654|       1.21      10.83|
+Info:      15000 |     3098      11708 |  136   864 |      9865|       0.79      11.62|
+Info:      16000 |     3207      12522 |  109   814 |      9009|       0.65      12.27|
+Info:      17000 |     3357      13253 |  150   731 |      8206|       0.62      12.89|
+Info:      18000 |     3427      14049 |   70   796 |      7288|       0.61      13.50|
+Info:      19000 |     3536      14847 |  109   798 |      6418|       0.51      14.01|
+Info:      20000 |     3681      15523 |  145   676 |      5607|       0.64      14.64|
+Info:      21000 |     3842      16204 |  161   681 |      4819|       0.60      15.24|
+Info:      22000 |     3937      17038 |   95   834 |      3933|       0.47      15.71|
+Info:      23000 |     4113      17861 |  176   823 |      3213|       0.75      16.46|
+Info:      24000 |     4384      18590 |  271   729 |      2584|       0.94      17.39|
+Info:      25000 |     4693      19281 |  309   691 |      2027|       1.02      18.42|
+Info:      26000 |     4861      20100 |  168   819 |      1271|       0.52      18.94|
+Info:      27000 |     4886      20964 |   25   864 |       302|       0.42      19.36|
+Info:      27301 |     4886      21234 |    0   270 |         0|       0.12      19.48|
+Info: Routing complete.
+Info: Router1 time 19.48s
+Info: Checksum: 0x7a324c53
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  5.83  5.83 Source u_dut.u_acc.u_mem.mem.0.1.DOB14
+Info:    routing  1.32  7.15 Net u_dut.u_acc.u_mem.mem.0.1_DOB14[1] (120,22) -> (120,17)
+Info:                          Sink u_dut.u_acc.u_mem.mem.0.0_DOA4_LUT4_C_Z_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /opt/eda/bin/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  7.39 Source u_dut.u_acc.u_mem.mem.0.0_DOA4_LUT4_C_Z_LUT4_Z.F
+Info:    routing  2.00  9.39 Net u_dut.u_acc.u_mem.mem.0.0_DOA4_LUT4_C_Z[3] (120,17) -> (103,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_89_D_CCU2C_S1$CCU2_COMB0.B
+Info:                          Defined in:
+Info:                               /opt/eda/bin/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.45  9.84 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_89_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  9.84 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_89_D_CCU2C_S1$CCU2_FCI_INT (103,16) -> (103,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_89_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  9.84 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_89_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  9.84 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_89_D_CCU2C_S1_COUT (103,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_91_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  9.91 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_91_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  9.91 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_91_D_CCU2C_S1$CCU2_FCI_INT (104,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_91_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  9.91 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_91_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  9.91 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_91_D_CCU2C_S1_COUT (104,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_94_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  9.98 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_94_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  9.98 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_94_D_CCU2C_S1$CCU2_FCI_INT (104,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_94_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  9.98 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_94_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  9.98 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_94_D_CCU2C_S1_COUT (104,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_96_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.05 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_96_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.05 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_96_D_CCU2C_S1$CCU2_FCI_INT (104,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_96_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.05 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_96_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.05 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_96_D_CCU2C_S1_COUT (104,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_98_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.12 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_98_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.12 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_98_D_CCU2C_S1$CCU2_FCI_INT (104,16) -> (104,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_98_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.12 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_98_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.12 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_98_D_CCU2C_S1_COUT (104,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_100_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.19 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_100_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.19 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_100_D_CCU2C_S1$CCU2_FCI_INT (105,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_100_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.19 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_100_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.19 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_100_D_CCU2C_S1_COUT (105,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_102_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.26 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_102_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.26 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_102_D_CCU2C_S1$CCU2_FCI_INT (105,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_102_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.26 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_102_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.26 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_102_D_CCU2C_S1_COUT (105,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_104_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.34 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_104_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.34 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_104_D_CCU2C_S1$CCU2_FCI_INT (105,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_104_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.34 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_104_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.34 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_104_D_CCU2C_S1_COUT (105,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_106_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.41 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_106_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.41 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_106_D_CCU2C_S1$CCU2_FCI_INT (105,16) -> (105,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_106_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.41 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_106_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.41 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_106_D_CCU2C_S1_COUT (105,16) -> (106,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_108_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.48 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_108_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.48 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_108_D_CCU2C_S1$CCU2_FCI_INT (106,16) -> (106,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_108_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.48 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_108_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.48 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_108_D_CCU2C_S1_COUT (106,16) -> (106,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_110_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.55 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_110_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.55 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_110_D_CCU2C_S1$CCU2_FCI_INT (106,16) -> (106,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_110_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.55 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_110_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.55 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_110_D_CCU2C_S1_COUT (106,16) -> (106,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_112_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  10.62 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_112_D_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  10.62 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_112_D_CCU2C_S1$CCU2_FCI_INT (106,16) -> (106,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_112_D_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  10.62 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_112_D_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  10.62 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_112_D_CCU2C_S1_COUT (106,16) -> (106,16)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_114_D_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_acc.sv:76.50-76.71
+Info:                               /opt/eda/bin/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /opt/eda/bin/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.44  11.06 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_114_D_CCU2C_S1$CCU2_COMB0.F
+Info:    routing  0.71  11.77 Net u_dut.u_acc.u_mem.wdata_LUT4_Z_114_D_CCU2C_S1_S0[2] (106,16) -> (106,15)
+Info:                          Sink u_dut.u_acc.u_mem.wdata_LUT4_Z_113.D
+Info:                          Defined in:
+Info:                               /opt/eda/bin/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  12.01 Source u_dut.u_acc.u_mem.wdata_LUT4_Z_113.F
+Info:    routing  0.13  12.14 Net u_dut.u_acc.new_row[92] (106,15) -> (106,15)
+Info:                          Sink u_dut.u_acc.u_mem.mem.0.2_DIB2_TRELLIS_FF_Q.DI
+Info:                          Defined in:
+Info:                               rtl/mem/sa_sram.sv:21.36-21.41
+Info:      setup  0.00  12.14 Source u_dut.u_acc.u_mem.mem.0.2_DIB2_TRELLIS_FF_Q.DI
+Info: 7.97 ns logic, 4.17 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source rst$tr_io.O
+Info:    routing  3.92  3.92 Net rst$TRELLIS_IO_IN (126,38) -> (87,18)
+Info:                          Sink u_dut.u_array.u_grid.g_row[1].g_col[6].u_pe.a_valid_q_TRELLIS_FF_Q.LSR
+Info:                          Defined in:
+Info:                               rtl/array/sa_feeder.sv:27.43-27.46
+Info:      setup  0.42  4.34 Source u_dut.u_array.u_grid.g_row[1].g_col[6].u_pe.a_valid_q_TRELLIS_FF_Q.LSR
+Info: 0.42 ns logic, 3.92 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source x3_TRELLIS_FF_Q.Q
+Info:    routing  1.55  2.08 Net dout$TRELLIS_IO_OUT (116,12) -> (126,11)
+Info:                          Sink dout$tr_io.I
+Info:                          Defined in:
+Info:                               /home/user/sysarray/build/synth/sa_core_S8_d4aedec/synth_wrap.v:65.13-65.15
+Info: 0.52 ns logic, 1.55 ns routing
+
+Warning: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 82.38 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 4.34 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 2.08 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 24 endpoint(s)
+Info:          + represents [1,24) endpoint(s)
+Info: [ -2139,  -1579) |+
+Info: [ -1579,  -1019) |*+
+Info: [ -1019,   -459) |****+
+Info: [  -459,    101) |***+
+Info: [   101,    661) |*+
+Info: [   661,   1221) |****+
+Info: [  1221,   1781) |******+
+Info: [  1781,   2341) |***********+
+Info: [  2341,   2901) |*****************+
+Info: [  2901,   3461) |*********************+
+Info: [  3461,   4021) |****+
+Info: [  4021,   4581) |*******+
+Info: [  4581,   5141) |*********************+
+Info: [  5141,   5701) |*****************************+
+Info: [  5701,   6261) |*******************************+
+Info: [  6261,   6821) |***************************************+
+Info: [  6821,   7381) |*******************************+
+Info: [  7381,   7941) |**********************************+
+Info: [  7941,   8501) |***********************************************************+
+Info: [  8501,   9061) |************************************************************ 
+1 warning, 0 errors
+
+Info: Program finished normally.
